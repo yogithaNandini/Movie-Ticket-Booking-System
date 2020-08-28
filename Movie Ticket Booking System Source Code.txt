@@ -1,0 +1,759 @@
+#include<string.h>
+#include<iostream>
+#include<fstream>
+using namespace std;
+class tickets
+{
+public:
+		char balSeats1[2][11],balSeats2[2][11],balSeats3[2][11],Aseats1[2][8],Aseats2[2][8],Aseats3[2][8],Bseats1[2][8],Bseats2[2][8],Bseats3[2][8];
+		void seats_mrng();
+		void seats_noon();
+		void seats_nyt();
+		void mrng();
+		void noon();
+		void nyt();
+		void column();
+};
+void tickets::seats_mrng()
+{
+	int i=1,a,b,c;
+	for ( i=1;i<3; i++)
+	{
+    	cout<<"|_ BALrows "<<i<<" _ "<<balSeats1[i][1];
+		cout<<"_|"<<"_"<<balSeats1[i][2];
+		cout<<"_|"<<"_"<<balSeats1[i][3];
+		cout<<"_|"<<"_"<<balSeats1[i][4];
+		cout<<"_|"<<"_"<<balSeats1[i][5];
+		cout<<"_|"<<"_"<<balSeats1[i][6];
+		cout<<"_|"<<"_"<<balSeats1[i][7];
+		cout<<"_|"<<"_"<<balSeats1[i][8];
+		cout<<"_|"<<"_"<<balSeats1[i][9];
+		cout<<"_|"<<"_"<<balSeats1[i][10];
+		cout<<"_|"<<"_"<<balSeats1[i][11];
+		cout<<"_|"<<endl;
+	}
+	cout<<"| Row Column"<<" _ "<<1;
+	cout<<"_|"<<"_"<<2;
+	cout<<"_|"<<"_"<<3;
+	cout<<"_|"<<"_"<<4;
+	cout<<"_|"<<"\t\t";
+	cout<<" |"<<"_"<<5;
+	cout<<"_|"<<"_"<<6;
+	cout<<"_|"<<"_"<<7;
+	cout<<"_|"<<"_"<<8;
+	cout<<"_|";
+	cout<<endl;
+	for(int j=1;j<3;j++)
+	{
+		cout<<"|_ A rows  "<<j<<" _ "<<Aseats1[j][1];
+		cout<<"_|"<<"_"<<Aseats1[j][2];
+		cout<<"_|"<<"_"<<Aseats1[j][3];
+		cout<<"_|"<<"_"<<Aseats1[j][4];
+		cout<<"_|";
+		cout<<"\t\t ";
+		cout<<"|"<<"_"<<Aseats1[j][5];
+		cout<<"_|"<<"_"<<Aseats1[j][6];
+		cout<<"_|"<<"_"<<Aseats1[j][7];
+		cout<<"_|"<<"_"<<Aseats1[j][8];
+		cout<<"_|"<<endl;
+	}
+	for(int j=1;j<3;j++)
+	{
+		cout<<"|_ B rows  "<<j<<" _ "<<Bseats1[j][1];
+		cout<<"_|"<<"_"<<Bseats1[j][2];
+		cout<<"_|"<<"_"<<Bseats1[j][3];
+		cout<<"_|"<<"_"<<Bseats1[j][4];
+		cout<<"_|";
+		cout<<"\t\t ";
+		cout<<"|"<<"_"<<Bseats1[j][5];
+		cout<<"_|"<<"_"<<Bseats1[j][6];
+		cout<<"_|"<<"_"<<Bseats1[j][7];
+		cout<<"_|"<<"_"<<Bseats1[j][8];
+		cout<<"_|"<<endl;
+	}
+	cout<<" input choice position ( type and row and column )"<<endl;
+	cin>>c>>a>>b;
+	switch(c)
+	{
+		case 1: if(balSeats1[a][b]!='1'&&a<3)
+				{
+					balSeats1[a][b]='1';
+					cout<<"TICKET COST IS 150/-"<<endl;
+				}
+				break;
+		case 2: if(Aseats1[a][b]!='1'&&a<3)
+				{
+					Aseats1[a][b]='1';
+					cout<<"TICKET COST IS 100/-"<<endl;
+				}
+				else
+					cout<<"wrong option"<<endl;
+				break;
+		case 3: if(Bseats1[a][b]!='1'&&a<3)
+				{
+					Bseats1[a][b]='1';
+					cout<<"TICKET COST IS 80/-"<<endl;
+				}
+				break;
+		default:{
+					cout<<endl;
+					cout<<" Warning : position not free. seek another."<<endl;
+				}
+	}
+}
+void tickets::seats_noon()
+{
+	int i=1,a,b,c;
+	for ( i=1;i<3; i++)
+	{
+       	cout<<"|_ BALrows "<<i<<" _ "<<balSeats2[i][1];
+		cout<<"_|"<<"_"<<balSeats2[i][2];
+		cout<<"_|"<<"_"<<balSeats2[i][3];
+		cout<<"_|"<<"_"<<balSeats2[i][4];
+		cout<<"_|"<<"_"<<balSeats2[i][5];
+		cout<<"_|"<<"_"<<balSeats2[i][6];
+		cout<<"_|"<<"_"<<balSeats2[i][7];
+		cout<<"_|"<<"_"<<balSeats2[i][8];
+		cout<<"_|"<<"_"<<balSeats2[i][9];
+		cout<<"_|"<<"_"<<balSeats2[i][10];
+		cout<<"_|"<<"_"<<balSeats2[i][11];
+		cout<<"_|"<<endl;
+	}
+	cout<<"| Row Column"<<" _ "<<1;
+	cout<<"_|"<<"_"<<2;
+	cout<<"_|"<<"_"<<3;
+	cout<<"_|"<<"_"<<4;
+	cout<<"_|"<<"\t\t";
+	cout<<" |"<<"_"<<5;
+	cout<<"_|"<<"_"<<6;
+	cout<<"_|"<<"_"<<7;
+	cout<<"_|"<<"_"<<8;
+	cout<<"_|";
+	cout<<endl;
+	for(int j=1;j<3;j++)
+	{
+		cout<<"|_ A rows  "<<j<<" _ "<<Aseats2[j][1];
+		cout<<"_|"<<"_"<<Aseats2[j][2];
+		cout<<"_|"<<"_"<<Aseats2[j][3];
+		cout<<"_|"<<"_"<<Aseats2[j][4];
+		cout<<"_|";
+		cout<<"\t\t ";
+		cout<<"|"<<"_"<<Aseats2[j][5];
+		cout<<"_|"<<"_"<<Aseats2[j][6];
+		cout<<"_|"<<"_"<<Aseats2[j][7];
+		cout<<"_|"<<"_"<<Aseats2[j][8];
+		cout<<"_|"<<endl;
+	}
+	for(int j=1;j<3;j++)
+	{
+		cout<<"|_ B rows  "<<j<<" _ "<<Bseats2[j][1];
+		cout<<"_|"<<"_"<<Bseats2[j][2];
+		cout<<"_|"<<"_"<<Bseats2[j][3];
+		cout<<"_|"<<"_"<<Bseats2[j][4];
+		cout<<"_|";
+		cout<<"\t\t ";
+		cout<<"|"<<"_"<<Bseats2[j][5];
+		cout<<"_|"<<"_"<<Bseats2[j][6];
+		cout<<"_|"<<"_"<<Bseats2[j][7];
+		cout<<"_|"<<"_"<<Bseats2[j][8];
+		cout<<"_|"<<endl;
+	}
+	cout<<" input choice position ( type and row and column )"<<endl;
+	cin>>c>>a>>b;
+	switch(c)
+	{
+		case 1: if(balSeats2[a][b]!='1'&&a<3)
+				{
+					balSeats2[a][b]='1';
+					cout<<"TICKET COST IS 150/-"<<endl;
+				}
+				break;
+		case 2: if(Aseats2[a][b]!='1'&&a<3)
+				{
+					Aseats2[a][b]='1';
+					cout<<"TICKET COST IS 100/-"<<endl;
+				}
+				else
+					cout<<"wrong option"<<endl;
+				break;
+		case 3: if(Bseats2[a][b]!='1'&&a<3)
+				{
+					Bseats2[a][b]='1';
+					cout<<"TICKET COST IS 80/-"<<endl;
+				}
+				break;
+		default:{
+					cout<<endl;
+					cout<<" Warning : position not free. seek another."<<endl;
+				}
+	}
+}
+void tickets::seats_nyt()
+{
+	int i=1,a,b,c;
+	for ( i=1;i<3; i++)
+	{
+       	cout<<"|_ BALrows "<<i<<" _ "<<balSeats3[i][1];
+		cout<<"_|"<<"_"<<balSeats3[i][2];
+		cout<<"_|"<<"_"<<balSeats3[i][3];
+		cout<<"_|"<<"_"<<balSeats3[i][4];
+		cout<<"_|"<<"_"<<balSeats3[i][5];
+		cout<<"_|"<<"_"<<balSeats3[i][6];
+		cout<<"_|"<<"_"<<balSeats3[i][7];
+		cout<<"_|"<<"_"<<balSeats3[i][8];
+		cout<<"_|"<<"_"<<balSeats3[i][9];
+		cout<<"_|"<<"_"<<balSeats3[i][10];
+		cout<<"_|"<<"_"<<balSeats3[i][11];
+		cout<<"_|"<<endl;
+	}
+	cout<<"| Row Column"<<" _ "<<1;
+	cout<<"_|"<<"_"<<2;
+	cout<<"_|"<<"_"<<3;
+	cout<<"_|"<<"_"<<4;
+	cout<<"_|"<<"\t\t";
+	cout<<" |"<<"_"<<5;
+	cout<<"_|"<<"_"<<6;
+	cout<<"_|"<<"_"<<7;
+	cout<<"_|"<<"_"<<8;
+	cout<<"_|";
+	cout<<endl;
+	for(int j=1;j<3;j++)
+	{
+		cout<<"|_ A rows  "<<j<<" _ "<<Aseats3[j][1];
+		cout<<"_|"<<"_"<<Aseats3[j][2];
+		cout<<"_|"<<"_"<<Aseats3[j][3];
+		cout<<"_|"<<"_"<<Aseats3[j][4];
+		cout<<"_|";
+		cout<<"\t\t ";
+		cout<<"|"<<"_"<<Aseats3[j][5];
+		cout<<"_|"<<"_"<<Aseats3[j][6];
+		cout<<"_|"<<"_"<<Aseats3[j][7];
+		cout<<"_|"<<"_"<<Aseats3[j][8];
+		cout<<"_|"<<endl;
+	}
+	for(int j=1;j<3;j++)
+	{
+		cout<<"|_ B rows  "<<j<<" _ "<<Bseats3[j][1];
+		cout<<"_|"<<"_"<<Bseats3[j][2];
+		cout<<"_|"<<"_"<<Bseats3[j][3];
+		cout<<"_|"<<"_"<<Bseats3[j][4];
+		cout<<"_|";
+		cout<<"\t\t ";
+		cout<<"|"<<"_"<<Bseats3[j][5];
+		cout<<"_|"<<"_"<<Bseats3[j][6];
+		cout<<"_|"<<"_"<<Bseats3[j][7];
+		cout<<"_|"<<"_"<<Bseats3[j][8];
+		cout<<"_|"<<endl;
+	}
+	cout<<" input choice position ( type and row and column )"<<endl;
+	cin>>c>>a>>b;
+	switch(c)
+	{
+		case 1: if(balSeats3[a][b]!='1'&&a<3)
+				{
+					balSeats3[a][b]='1';
+					cout<<"TICKET COST IS 150/-"<<endl;
+				}
+				break;
+		case 2: if(Aseats3[a][b]!='1'&&a<3)
+				{
+					Aseats3[a][b]='1';
+					cout<<"TICKET COST IS 100/-"<<endl;
+				}
+				else
+					cout<<"wrong option"<<endl;
+				break;
+		case 3: if(Bseats3[a][b]!='1'&&a<3)
+				{
+					Bseats3[a][b]='1';
+					cout<<"TICKET COST IS 80/-"<<endl;
+				}
+				break;
+		default:{
+					cout<<endl;
+					cout<<" Warning : position not free. seek another."<<endl;
+				}
+	}
+}
+void tickets::mrng()
+{
+	int i=1,a,b;
+	for ( i=1;i<3; i++)
+	{
+		cout<<"|  BALrows "<<i<<" _ "<<balSeats1[i][1];
+		cout<<"_|"<<"_"<<balSeats1[i][2];
+		cout<<"_|"<<"_"<<balSeats1[i][3];
+		cout<<"_|"<<"_"<<balSeats1[i][4];
+		cout<<"_|"<<"_"<<balSeats1[i][5];
+		cout<<"_|"<<"_"<<balSeats1[i][6];
+		cout<<"_|"<<"_"<<balSeats1[i][7];
+		cout<<"_|"<<"_"<<balSeats1[i][8];
+		cout<<"_|"<<"_"<<balSeats1[i][9];
+		cout<<"_|"<<"_"<<balSeats1[i][10];
+		cout<<"_|"<<"_"<<balSeats1[i][11];
+		cout<<"_|"<<'\n';
+	}
+	cout<<"| Row Column"<<" _ "<<1;
+	cout<<"_|"<<"_"<<2;
+	cout<<"_|"<<"_"<<3;
+	cout<<"_|"<<"_"<<4;
+	cout<<"_|"<<"\t\t";
+	cout<<" |"<<"_"<<5;
+	cout<<"_|"<<"_"<<6;
+	cout<<"_|"<<"_"<<7;
+	cout<<"_|"<<"_"<<8;
+	cout<<"_|";
+	cout<<endl;
+	for(int j=1;j<3;j++)
+	{
+		cout<<"|_ A rows  "<<j<<" _ "<<Aseats1[j][1];
+		cout<<"_|"<<"_"<<Aseats1[j][2];
+		cout<<"_|"<<"_"<<Aseats1[j][3];
+		cout<<"_|"<<"_"<<Aseats1[j][4];
+		cout<<"_|";
+		cout<<"\t\t ";
+		cout<<"|"<<"_"<<Aseats1[j][5];
+		cout<<"_|"<<"_"<<Aseats1[j][6];
+		cout<<"_|"<<"_"<<Aseats1[j][7];
+		cout<<"_|"<<"_"<<Aseats1[j][8];
+		cout<<"_|"<<'\n';
+	}
+	for(int j=1;j<3;j++)
+	{
+		cout<<"|_ B rows  "<<j<<" _ "<<Bseats1[j][1];
+		cout<<"_|"<<"_"<<Bseats1[j][2];
+		cout<<"_|"<<"_"<<Bseats1[j][3];
+		cout<<"_|"<<"_"<<Bseats1[j][4];
+		cout<<"_|";
+		cout<<"\t\t ";
+		cout<<"|"<<"_"<<Bseats1[j][5];
+		cout<<"_|"<<"_"<<Bseats1[j][6];
+		cout<<"_|"<<"_"<<Bseats1[j][7];
+		cout<<"_|"<<"_"<<Bseats1[j][8];
+		cout<<"_|"<<'\n';
+	}
+	ofstream outfile;
+        outfile.open("mrng.txt",ios::trunc);
+	 	outfile<<"|_  Column  "<<" _ "<<1;
+		outfile<<"_|"<<"_"<<2;
+		outfile<<"_|"<<"_"<<3;
+		outfile<<"_|"<<"_"<<4;
+		outfile<<"_|"<<"_"<<5;
+		outfile<<"_|"<<"_"<<6;
+		outfile<<"_|"<<"_"<<7;
+		outfile<<"_|"<<"_"<<8;
+		outfile<<"_|"<<"_"<<9;
+		outfile<<"_|"<<"_"<<10;
+		outfile<<"_|"<<"_"<<11;
+		outfile<<endl;
+	for ( i=1;i<3; i++)
+	{
+    	outfile<<"|_ BALrows "<<i<<" _ "<<balSeats1[i][1];
+		outfile<<"_|"<<"_"<<balSeats1[i][2];
+		outfile<<"_|"<<"_"<<balSeats1[i][3];
+		outfile<<"_|"<<"_"<<balSeats1[i][4];
+		outfile<<"_|"<<"_"<<balSeats1[i][5];
+		outfile<<"_|"<<"_"<<balSeats1[i][6];
+		outfile<<"_|"<<"_"<<balSeats1[i][7];
+		outfile<<"_|"<<"_"<<balSeats1[i][8];
+		outfile<<"_|"<<"_"<<balSeats1[i][9];
+		outfile<<"_|"<<"_"<<balSeats1[i][10];
+		outfile<<"_|"<<"_"<<balSeats1[i][11];
+		outfile<<"_|"<<'\n';
+	}
+		outfile<<"| Row Column"<<" _ "<<1;
+		outfile<<"_|"<<"_"<<2;
+		outfile<<"_|"<<"_"<<3;
+		outfile<<"_|"<<"_"<<4;
+		outfile<<"_|"<<"\t\t\t";
+		outfile<<" |"<<"_"<<5;
+		outfile<<"_|"<<"_"<<6;
+		outfile<<"_|"<<"_"<<7;
+		outfile<<"_|"<<"_"<<8;
+		outfile<<"_|";
+		outfile<<endl;
+	for(int j=1;j<3;j++)
+	{
+		outfile<<"|_ A rows  "<<j<<" _ "<<Aseats1[j][1];
+		outfile<<"_|"<<"_"<<Aseats1[j][2];
+		outfile<<"_|"<<"_"<<Aseats1[j][3];
+		outfile<<"_|"<<"_"<<Aseats1[j][4];
+		outfile<<"_|";
+		outfile<<"\t\t\t ";
+		outfile<<"|"<<"_"<<Aseats1[j][5];
+		outfile<<"_|"<<"_"<<Aseats1[j][6];
+		outfile<<"_|"<<"_"<<Aseats1[j][7];
+		outfile<<"_|"<<"_"<<Aseats1[j][8];
+		outfile<<"_|"<<'\n';
+	}
+	for(int j=1;j<3;j++)
+	{
+		outfile<<"|_ B rows  "<<j<<" _ "<<Bseats1[j][1];
+		outfile<<"_|"<<"_"<<Bseats1[j][2];
+		outfile<<"_|"<<"_"<<Bseats1[j][3];
+		outfile<<"_|"<<"_"<<Bseats1[j][4];
+		outfile<<"_|";
+		outfile<<"\t\t\t ";
+		outfile<<"|"<<"_"<<Bseats1[j][5];
+		outfile<<"_|"<<"_"<<Bseats1[j][6];
+		outfile<<"_|"<<"_"<<Bseats1[j][7];
+		outfile<<"_|"<<"_"<<Bseats1[j][8];
+		outfile<<"_|"<<'\n';
+	}
+}
+void tickets::noon()
+{
+	int i=1,a,b;
+	for ( i=1;i<3; i++)
+	{
+    	cout<<"|  BALrows "<<i<<" _ "<<balSeats2[i][1];
+		cout<<"_|"<<"_"<<balSeats2[i][2];
+		cout<<"_|"<<"_"<<balSeats2[i][3];
+		cout<<"_|"<<"_"<<balSeats2[i][4];
+		cout<<"_|"<<"_"<<balSeats2[i][5];
+		cout<<"_|"<<"_"<<balSeats2[i][6];
+		cout<<"_|"<<"_"<<balSeats2[i][7];
+		cout<<"_|"<<"_"<<balSeats2[i][8];
+		cout<<"_|"<<"_"<<balSeats2[i][9];
+		cout<<"_|"<<"_"<<balSeats2[i][10];
+		cout<<"_|"<<"_"<<balSeats2[i][11];
+		cout<<"_|"<<'\n';
+	}
+		cout<<"| Row Column"<<" _ "<<1;
+		cout<<"_|"<<"_"<<2;
+		cout<<"_|"<<"_"<<3;
+		cout<<"_|"<<"_"<<4;
+		cout<<"_|"<<"\t\t";
+		cout<<" |"<<"_"<<5;
+		cout<<"_|"<<"_"<<6;
+		cout<<"_|"<<"_"<<7;
+		cout<<"_|"<<"_"<<8;
+		cout<<"_|";
+		cout<<endl;
+	for(int j=1;j<3;j++)
+	{
+		 cout<<"|_ A rows  "<<j<<" _ "<<Aseats2[j][1];
+		cout<<"_|"<<"_"<<Aseats2[j][2];
+		cout<<"_|"<<"_"<<Aseats2[j][3];
+		cout<<"_|"<<"_"<<Aseats2[j][4];
+		cout<<"_|";
+		cout<<"\t\t ";
+		cout<<"|"<<"_"<<Aseats2[j][5];
+		cout<<"_|"<<"_"<<Aseats2[j][6];
+		cout<<"_|"<<"_"<<Aseats2[j][7];
+		cout<<"_|"<<"_"<<Aseats2[j][8];
+		cout<<"_|"<<'\n';
+	}
+	for(int j=1;j<3;j++)
+	{
+		cout<<"|_ B rows  "<<j<<" _ "<<Bseats2[j][1];
+		cout<<"_|"<<"_"<<Bseats2[j][2];
+		cout<<"_|"<<"_"<<Bseats2[j][3];
+		cout<<"_|"<<"_"<<Bseats2[j][4];
+		cout<<"_|";
+		cout<<"\t\t ";
+		cout<<"|"<<"_"<<Bseats2[j][5];
+		cout<<"_|"<<"_"<<Bseats2[j][6];
+		cout<<"_|"<<"_"<<Bseats2[j][7];
+		cout<<"_|"<<"_"<<Bseats2[j][8];
+		cout<<"_|"<<'\n';
+	}
+	ofstream outfile;
+        outfile.open("noon.txt",ios::trunc);
+	 	outfile<<"|_  Column  "<<" _ "<<1;
+		outfile<<"_|"<<"_"<<2;
+		outfile<<"_|"<<"_"<<3;
+		outfile<<"_|"<<"_"<<4;
+		outfile<<"_|"<<"_"<<5;
+		outfile<<"_|"<<"_"<<6;
+		outfile<<"_|"<<"_"<<7;
+		outfile<<"_|"<<"_"<<8;
+		outfile<<"_|"<<"_"<<9;
+		outfile<<"_|"<<"_"<<10;
+		outfile<<"_|"<<"_"<<11;
+		outfile<<endl;
+	for ( i=1;i<3; i++)
+	{
+    	outfile<<"|_ BALrows "<<i<<" _ "<<balSeats2[i][1];
+		outfile<<"_|"<<"_"<<balSeats2[i][2];
+		outfile<<"_|"<<"_"<<balSeats2[i][3];
+		outfile<<"_|"<<"_"<<balSeats2[i][4];
+		outfile<<"_|"<<"_"<<balSeats2[i][5];
+		outfile<<"_|"<<"_"<<balSeats2[i][6];
+		outfile<<"_|"<<"_"<<balSeats2[i][7];
+		outfile<<"_|"<<"_"<<balSeats2[i][8];
+		outfile<<"_|"<<"_"<<balSeats2[i][9];
+		outfile<<"_|"<<"_"<<balSeats2[i][10];
+		outfile<<"_|"<<"_"<<balSeats2[i][11];
+		outfile<<"_|"<<'\n';
+	}
+	outfile<<"| Row Column"<<" _ "<<1;
+		outfile<<"_|"<<"_"<<2;
+		outfile<<"_|"<<"_"<<3;
+		outfile<<"_|"<<"_"<<4;
+		outfile<<"_|"<<"\t\t\t";
+		outfile<<" |"<<"_"<<5;
+		outfile<<"_|"<<"_"<<6;
+		outfile<<"_|"<<"_"<<7;
+		outfile<<"_|"<<"_"<<8;
+		outfile<<"_|";
+		outfile<<endl;
+	for(int j=1;j<3;j++)
+	{
+		outfile<<"|_ A rows  "<<j<<" _ "<<Aseats2[j][1];
+		outfile<<"_|"<<"_"<<Aseats2[j][2];
+		outfile<<"_|"<<"_"<<Aseats2[j][3];
+		outfile<<"_|"<<"_"<<Aseats2[j][4];
+		outfile<<"_|";
+		outfile<<"\t\t\t ";
+		outfile<<"|"<<"_"<<Aseats2[j][5];
+		outfile<<"_|"<<"_"<<Aseats2[j][6];
+		outfile<<"_|"<<"_"<<Aseats2[j][7];
+		outfile<<"_|"<<"_"<<Aseats2[j][8];
+		outfile<<"_|"<<'\n';
+	}
+	for(int j=1;j<3;j++)
+	{
+		outfile<<"|_ B rows  "<<j<<" _ "<<Bseats2[j][1];
+		outfile<<"_|"<<"_"<<Bseats2[j][2];
+		outfile<<"_|"<<"_"<<Bseats2[j][3];
+		outfile<<"_|"<<"_"<<Bseats2[j][4];
+		outfile<<"_|";
+		outfile<<"\t\t\t ";
+		outfile<<"|"<<"_"<<Bseats2[j][5];
+		outfile<<"_|"<<"_"<<Bseats2[j][6];
+		outfile<<"_|"<<"_"<<Bseats2[j][7];
+		outfile<<"_|"<<"_"<<Bseats2[j][8];
+		outfile<<"_|"<<'\n';
+	}
+}
+void tickets::nyt()
+{
+	int i=1,a,b;
+	for ( i=1;i<3; i++)
+	{
+        	cout<<"|  BALrows "<<i<<" _ "<<balSeats3[i][1];
+		cout<<"_|"<<"_"<<balSeats3[i][2];
+		cout<<"_|"<<"_"<<balSeats3[i][3];
+		cout<<"_|"<<"_"<<balSeats3[i][4];
+		cout<<"_|"<<"_"<<balSeats3[i][5];
+		cout<<"_|"<<"_"<<balSeats3[i][6];
+		cout<<"_|"<<"_"<<balSeats3[i][7];
+		cout<<"_|"<<"_"<<balSeats3[i][8];
+		cout<<"_|"<<"_"<<balSeats3[i][9];
+		cout<<"_|"<<"_"<<balSeats3[i][10];
+		cout<<"_|"<<"_"<<balSeats3[i][11];
+		cout<<"_|"<<'\n';
+	}
+		cout<<"| Row Column"<<" _ "<<1;
+		cout<<"_|"<<"_"<<2;
+		cout<<"_|"<<"_"<<3;
+		cout<<"_|"<<"_"<<4;
+		cout<<"_|"<<"\t\t";
+		cout<<" |"<<"_"<<5;
+		cout<<"_|"<<"_"<<6;
+		cout<<"_|"<<"_"<<7;
+		cout<<"_|"<<"_"<<8;
+		cout<<"_|";
+		cout<<endl;
+	for(int j=1;j<3;j++)
+	{
+		 cout<<"|_ A rows  "<<j<<" _ "<<Aseats3[j][1];
+		cout<<"_|"<<"_"<<Aseats3[j][2];
+		cout<<"_|"<<"_"<<Aseats3[j][3];
+		cout<<"_|"<<"_"<<Aseats3[j][4];
+		cout<<"_|";
+		cout<<"\t\t ";
+		cout<<"|"<<"_"<<Aseats3[j][5];
+		cout<<"_|"<<"_"<<Aseats3[j][6];
+		cout<<"_|"<<"_"<<Aseats3[j][7];
+		cout<<"_|"<<"_"<<Aseats3[j][8];
+		cout<<"_|"<<'\n';
+	}
+	for(int j=1;j<3;j++)
+	{
+		cout<<"|_ B rows  "<<j<<" _ "<<Bseats3[j][1];
+		cout<<"_|"<<"_"<<Bseats3[j][2];
+		cout<<"_|"<<"_"<<Bseats3[j][3];
+		cout<<"_|"<<"_"<<Bseats3[j][4];
+		cout<<"_|";
+		cout<<"\t\t ";
+		cout<<"|"<<"_"<<Bseats3[j][5];
+		cout<<"_|"<<"_"<<Bseats3[j][6];
+		cout<<"_|"<<"_"<<Bseats3[j][7];
+		cout<<"_|"<<"_"<<Bseats3[j][8];
+		cout<<"_|"<<'\n';
+	}
+	ofstream outfile;
+        outfile.open("nyt.txt",ios::trunc);
+	 	outfile<<"|_  Column  "<<" _ "<<1;
+		outfile<<"_|"<<"_"<<2;
+		outfile<<"_|"<<"_"<<3;
+		outfile<<"_|"<<"_"<<4;
+		outfile<<"_|"<<"_"<<5;
+		outfile<<"_|"<<"_"<<6;
+		outfile<<"_|"<<"_"<<7;
+		outfile<<"_|"<<"_"<<8;
+		outfile<<"_|"<<"_"<<9;
+		outfile<<"_|"<<"_"<<10;
+		outfile<<"_|"<<"_"<<11;
+		outfile<<endl;
+	for ( i=1;i<3; i++)
+	{
+        	outfile<<"|_ BALrows "<<i<<" _ "<<balSeats3[i][1];
+		outfile<<"_|"<<"_"<<balSeats3[i][2];
+		outfile<<"_|"<<"_"<<balSeats3[i][3];
+		outfile<<"_|"<<"_"<<balSeats3[i][4];
+		outfile<<"_|"<<"_"<<balSeats3[i][5];
+		outfile<<"_|"<<"_"<<balSeats3[i][6];
+		outfile<<"_|"<<"_"<<balSeats3[i][7];
+		outfile<<"_|"<<"_"<<balSeats3[i][8];
+		outfile<<"_|"<<"_"<<balSeats3[i][9];
+		outfile<<"_|"<<"_"<<balSeats3[i][10];
+		outfile<<"_|"<<"_"<<balSeats3[i][11];
+		outfile<<"_|"<<'\n';
+	}
+	outfile<<"| Row Column"<<" _ "<<1;
+		outfile<<"_|"<<"_"<<2;
+		outfile<<"_|"<<"_"<<3;
+		outfile<<"_|"<<"_"<<4;
+		outfile<<"_|"<<"\t\t\t";
+		outfile<<" |"<<"_"<<5;
+		outfile<<"_|"<<"_"<<6;
+		outfile<<"_|"<<"_"<<7;
+		outfile<<"_|"<<"_"<<8;
+		outfile<<"_|";
+		outfile<<endl;
+	for(int j=1;j<3;j++)
+	{
+		outfile<<"|_ A rows  "<<j<<" _ "<<Aseats3[j][1];
+		outfile<<"_|"<<"_"<<Aseats3[j][2];
+		outfile<<"_|"<<"_"<<Aseats3[j][3];
+		outfile<<"_|"<<"_"<<Aseats3[j][4];
+		outfile<<"_|";
+		outfile<<"\t\t\t ";
+		outfile<<"|"<<"_"<<Aseats3[j][5];
+		outfile<<"_|"<<"_"<<Aseats3[j][6];
+		outfile<<"_|"<<"_"<<Aseats3[j][7];
+		outfile<<"_|"<<"_"<<Aseats3[j][8];
+		outfile<<"_|"<<'\n';
+	}
+	for(int j=1;j<3;j++)
+	{
+		outfile<<"|_ B rows  "<<j<<" _ "<<Bseats3[j][1];
+		outfile<<"_|"<<"_"<<Bseats3[j][2];
+		outfile<<"_|"<<"_"<<Bseats3[j][3];
+		outfile<<"_|"<<"_"<<Bseats3[j][4];
+		outfile<<"_|";
+		outfile<<"\t\t\t ";
+		outfile<<"|"<<"_"<<Bseats3[j][5];
+		outfile<<"_|"<<"_"<<Bseats3[j][6];
+		outfile<<"_|"<<"_"<<Bseats3[j][7];
+		outfile<<"_|"<<"_"<<Bseats3[j][8];
+		outfile<<"_|"<<'\n';
+	}
+}
+void tickets::column()
+{
+        	cout<<"|Bal Column "<<" _ "<<1;
+		cout<<"_|"<<"_"<<2;
+		cout<<"_|"<<"_"<<3;
+		cout<<"_|"<<"_"<<4;
+		cout<<"_|"<<"_"<<5;
+		cout<<"_|"<<"_"<<6;
+		cout<<"_|"<<"_"<<7;
+		cout<<"_|"<<"_"<<8;
+		cout<<"_|"<<"_"<<9;
+		cout<<"_|"<<"_"<<10;
+		cout<<"_|"<<"_"<<11;
+		cout<<endl;
+}
+int main()
+{
+	tickets t;
+	int ch,s,n;
+	for(int a=1;a<3;a++)
+		{
+			for (int b=1; b<12;b++)
+			{
+				t.balSeats1[a][b] = '0';
+				t.balSeats2[a][b] = '0';
+				t.balSeats3[a][b] = '0';
+			}
+		}
+		for(int a=1;a<3;a++)
+		{
+			for(int b=1;b<9;b++)
+			{
+				t.Aseats1[a][b]='0';
+				t.Aseats2[a][b]='0';
+				t.Aseats3[a][b]='0';
+				t.Bseats1[a][b]='0';
+				t.Bseats2[a][b]='0';
+				t.Bseats3[1][b]='0';
+			}
+		}
+			for(int b=1;b<5;b++)
+			{
+				t.Bseats3[2][b]='0';
+			}
+	/*	t.Bseats3[1][8]= '0';
+		t.Bseats3[2][1]= '0';
+		t.Bseats3[2][2]= '0';
+		t.Bseats3[2][3]= '0';
+		t.Bseats3[2][4]= '0';*/
+		t.Bseats3[2][5]= '0';
+		t.Bseats3[2][6]= '0';
+		t.Bseats3[2][7]= '0';
+		t.Bseats3[2][8]= '0';
+	while(1)
+	{
+		cout<<"show timings:\n1.mrng\n2.noon\n3.nyt"<<endl;
+		cout<<"enter your choice:";
+		cin>>s;
+		if(s>3)
+			break;
+		cout<<"ticket type:\n1.balcony\n2.Aclass\n3.Bclass"<<endl;
+		bool choice = 1;
+		while (choice==true)
+		{
+			t.column();
+			if(s==1)
+				t.seats_mrng();
+			else
+			{
+				if(s==2)
+					t.seats_noon();
+				else
+				{
+					if(s==3)
+						t.seats_nyt();
+				}
+			}
+			cout<< "Would like to choose another seat?(Please choose only 1 or 0)" <<endl;
+			cout<< "(1) Yes" <<endl;
+			cout<< "(0) No" <<endl;
+			cin>>choice;
+			if (choice==0)
+				break;
+			else if(choice!=1||0)
+				cout<<"option is wrong"<<endl;
+		}
+		t.column();
+		if(s==1)
+			t.mrng();
+		else
+		{
+			if(s==2)
+				t.noon();
+			else
+			{
+				if(s==3)
+					t.nyt();
+				else
+					cout<<"wrong option"<<endl;
+			}
+		}
+	}
+	return 0;
+}
